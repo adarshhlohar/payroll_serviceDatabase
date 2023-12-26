@@ -13,5 +13,7 @@ CREATE TABLE employee_payroll (
 -- UC-3 Adding data to employee_payroll
 INSERT INTO employee_payroll(name,salary,start_date)values("Adarsh",50000,2023-12-25);
 
+-- UC-4 showing the data
+select * from employee_payroll;
 
 
