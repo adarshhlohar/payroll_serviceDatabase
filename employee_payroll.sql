@@ -17,4 +17,3 @@ INSERT INTO employee_payroll(name,salary,start_date)values("Adarsh",50000,2023-1
 select * from employee_payroll;
 
 
-
