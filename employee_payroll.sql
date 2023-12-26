@@ -47,3 +47,11 @@ WHERE gender = 'M' GROUP BY gender;
 
 SELECT avg(salary) FROM employee_payroll
 WHERE gender = 'M' GROUP BY gender;
+
+
+-- UC-08 Add phone, address, and department columns to the employee_payroll table
+ALTER TABLE employee_payroll
+ADD COLUMN employee_phone VARCHAR(15), -- Assuming phone number can be stored as a string of max 15 characters
+ADD COLUMN employee_address VARCHAR(255), -- Assuming address can be stored as a string of max 255 characters
+ADD COLUMN employee_department VARCHAR(50) NOT NULL; -- Assuming department can be stored as a string of max 50 characters and is non-nullable
+
