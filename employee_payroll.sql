@@ -10,7 +10,6 @@ CREATE TABLE employee_payroll (
     start_date DATE NOT NULL
 );
 
-
 INSERT INTO employee_payroll (name, salary, start_date)
 VALUES 
 ('John Doe', 50000.00, '2023-01-01'),
@@ -26,7 +25,6 @@ INSERT INTO employee_payroll(name,salary,start_date)values("Adarsh",50000,2023-1
 select * from employee_payroll;
 
 
-
 -- UC-5 Ability to retrieve salary data for a particular employee as well as all employees who have joined in a particular data range from the database
 SELECT salary FROM employee_payroll
 WHERE name = 'Adarsh' AND start_date BETWEEN CAST('2023-05-01'
@@ -39,4 +37,13 @@ ADD gender VARCHAR(10);
 
 UPDATE employee_payroll set gender ='M' where name = 'Adarsh';
 
+-- Ability to find sum, average, min, max and number of male and female employees
+SELECT max(salary) FROM employee_payroll
+WHERE gender = 'M' GROUP BY gender;
 
+SELECT sum(salary) FROM employee_payroll
+WHERE gender = 'M' GROUP BY gender;
+
+
+SELECT avg(salary) FROM employee_payroll
+WHERE gender = 'M' GROUP BY gender;
