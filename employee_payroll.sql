@@ -10,6 +10,7 @@ CREATE TABLE employee_payroll (
     start_date DATE NOT NULL
 );
 
+
 INSERT INTO employee_payroll (name, salary, start_date)
 VALUES 
 ('John Doe', 50000.00, '2023-01-01'),
@@ -23,6 +24,8 @@ INSERT INTO employee_payroll(name,salary,start_date)values("Adarsh",50000,2023-1
 
 -- UC-4 showing the data
 select * from employee_payroll;
+
+
 
 -- UC-5 Ability to retrieve salary data for a particular employee as well as all employees who have joined in a particular data range from the database
 SELECT salary FROM employee_payroll
